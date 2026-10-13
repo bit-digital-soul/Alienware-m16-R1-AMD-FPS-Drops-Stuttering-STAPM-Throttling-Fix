@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "case_id": "m16-r1-amd-7845hx-bios-1.25.0",
+  "observation_date": null,
+  "documentation_date": "2026-10-13",
+  "common_settings": {
+    "STAPM Control": "Manual",
+    "STAPM Boost Override": "1",
+    "STAPM Boost": "0",
+    "Tskin Time Constant": "0"
+  },
+  "runs": [
+    {
+      "id": "A",
+      "system_temperature_tracking": "0",
+      "fps_result": "I observed the FPS drops disappear",
+      "image": "assets/hwinfo-stt-disabled.png"
+    },
+    {
+      "id": "B",
+      "system_temperature_tracking": "Auto",
+      "fps_result": "I observed the FPS drops return",
+      "image": "assets/hwinfo-stt-auto.png"
+    }
+  ],
+  "limitations": [
+    "I have not included a raw HWiNFO CSV or synchronized FPS/frametime recording.",
+    "Workload name, run duration, ambient temperature, fan profile and GPU model were not recorded.",
+    "Snapshots are from different times; maxima are not simultaneous samples.",
+    "I have not documented a final Auto-to-0 repeat.",
+    "The case does not identify a faulty sensor or the exact Dell EC/SMU implementation."
+  ],
+  "separate_history": {
+    "thermal_interface": "I replaced Element 31 with PTM7950 before these tests; not established as a prerequisite",
+    "monitoring": "I separately linked periodic stutters to HWiNFO DELL EC monitoring",
+    "software_attempts": "I tried RyzenAdj/UXTU without success; exact versions and complete logs unavailable"
+  }
+}

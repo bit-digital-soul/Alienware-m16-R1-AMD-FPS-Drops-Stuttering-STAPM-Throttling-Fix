@@ -1,0 +1,12 @@
+sensor,unit,stt_0_current,stt_0_maximum,stt_auto_current,stt_auto_maximum
+APU STAPM Limit,%,28.3,58.3,100.0,106.0
+CPU PPT FAST Limit,%,80.2,106.4,38.9,101.1
+CPU PPT SLOW Limit,%,100.0,101.1,43.8,111.1
+CPU Package Power,W,41.687,88.859,35.817,88.212
+CPU Tctl/Tdie,C,84.8,92.4,73.1,92.0
+CPU Die (average),C,78.1,91.0,71.5,91.0
+Thermal Limit,%,86.7,101.1,80.3,102.2
+Frequency Limit - Global,MHz,1738.4,5232.9,1403.4,5219.7
+Thermal Throttling (HTC),boolean,No,No,No,No
+Thermal Throttling (PROCHOT CPU),boolean,No,No,No,No
+Thermal Throttling (PROCHOT EXT),boolean,No,No,No,No

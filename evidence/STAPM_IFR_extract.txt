@@ -1,0 +1,131 @@
+STAPM IFR extract — CbsSetupDxeRPL, BIOS 1.25.0
+Offsets below are offsets/RVAs within the extracted PE image, NOT BIOS_IMG.rcv offsets.
+VarOffset is relative to the AmdSetupRPL data buffer; do not treat it as a file offset.
+Navigation: AMD CBS (FormId 0x7000) -> SMU Common Options (FormId 0x7006).
+Runtime values are unknown; defaults are compile-time IFR defaults.
+
+STAPM Control
+Auto = Use the default STAPM settings
+Manual = User can set customized STAPM settings
+
+System Temperature Tracking
+0 = System Temperature Tracking disabled
+1 = System Temperature Tracking enabled
+
+STAPM Boost Override
+1 = use value in STAPM_BOOST
+0 = use SMU FW default
+
+STAPM Boost
+0 = STAPM Boost Disabled
+1 = STAPM Boost Enabled
+
+Tskin Time Constant
+Tskin time constant [seconds]
+
+0x00B1F8 (+0x0004) FormSet C03209ED-5F4B-4631-BD03-8ED627CD9DAF 'AMD CBS' class=93039971-8545-4B04-B45E-32EB8326040E {0E A7 ED 09 32 C0 4B 5F 31 46 BD 03 8E D6 27 CD 9D AF 03 00 04 00 01 71 99 03 93 45 85 04 4B B4 5E 32 EB 83 26 04 0E}
+0x00B21F (+0x002B)   Guid 0F0B1735-87A0-4193-B266-538C38AF48CE 03 55 00 {5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 03 55 00}
+0x00B234 (+0x0040)   Guid 0F0B1735-87A0-4193-B266-538C38AF48CE 04 00 00 {5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 04 00 00}
+0x00B249 (+0x0055)   DefaultStore 00 00 00 00 {5C 06 00 00 00 00}
+0x00B24F (+0x005B)   DefaultStore 00 00 01 00 {5C 06 00 00 01 00}
+0x00B255 (+0x0061)   VarStore AmdSetupRPL 3A997502-647A-4C82-998E-52EF9486A247 Id=0x5000 Size=0x6D5 {24 22 02 75 99 3A 7A 64 82 4C 99 8E 52 EF 94 86 A2 47 00 50 D5 06 41 6D 64 53 65 74 75 70 52 50 4C 00}
+0x00B277 (+0x0083)   Form FormId=0x7000 'AMD CBS' {01 86 00 70 03 00}
+0x00B27D (+0x0089)     Subtitle 'AMD CBS' '' {02 87 03 00 00 00 00}
+0x00B284 (+0x0090)     End {29 02}
+0x00B286 (+0x0092)     Subtitle '' '' {02 87 02 00 00 00 00}
+0x00B28D (+0x0099)     End {29 02}
+0x00B28F (+0x009B)     Text 'AMD CBS Revision Number' '' {03 08 07 00 02 00 08 00}
+0x00B297 (+0x00A3)     Subtitle '' '' {02 87 02 00 00 00 00}
+0x00B29E (+0x00AA)     End {29 02}
+0x00B2A0 (+0x00AC)     Ref 'CPU Common Options' QId=0x0001 VarStore=0x0000 VarOffset=0xFFFF Flags=0x00 TargetForm=0x7001 {0F 0F 09 00 09 00 01 00 00 00 FF FF 00 01 70}
+0x00B2AF (+0x00BB)     Ref 'DF Common Options' QId=0x0002 VarStore=0x0000 VarOffset=0xFFFF Flags=0x00 TargetForm=0x7002 {0F 0F 0A 00 0A 00 02 00 00 00 FF FF 00 02 70}
+0x00B2BE (+0x00CA)     Ref 'UMC Common Options' QId=0x0003 VarStore=0x0000 VarOffset=0xFFFF Flags=0x00 TargetForm=0x7003 {0F 0F 0B 00 0B 00 03 00 00 00 FF FF 00 03 70}
+0x00B2CD (+0x00D9)     Ref 'NBIO Common Options' QId=0x0004 VarStore=0x0000 VarOffset=0xFFFF Flags=0x00 TargetForm=0x7004 {0F 0F 0C 00 0C 00 04 00 00 00 FF FF 00 04 70}
+0x00B2DC (+0x00E8)     Ref 'FCH Common Options' QId=0x0005 VarStore=0x0000 VarOffset=0xFFFF Flags=0x00 TargetForm=0x7005 {0F 0F 0D 00 0D 00 05 00 00 00 FF FF 00 05 70}
+0x00B2EB (+0x00F7)     Ref 'SMU Common Options' QId=0x0006 VarStore=0x0000 VarOffset=0xFFFF Flags=0x00 TargetForm=0x7006 {0F 0F 0E 00 0E 00 06 00 00 00 FF FF 00 06 70}
+0x00B2FA (+0x0106)     Ref 'SOC Miscellaneous Control' QId=0x0007 VarStore=0x0000 VarOffset=0xFFFF Flags=0x00 TargetForm=0x7007 {0F 0F 0F 00 0F 00 07 00 00 00 FF FF 00 07 70}
+0x00B309 (+0x0115)     SuppressIf {0A 82}
+0x00B30B (+0x0117)       EqIdVal QId=0x028A Value=0x43F7 {12 86 8A 02 F7 43}
+0x00B311 (+0x011D)         Not {17 02}
+0x00B313 (+0x011F)         EqIdVal QId=0x028A Value=0x43F8 {12 06 8A 02 F8 43}
+0x00B319 (+0x0125)         Not {17 02}
+0x00B31B (+0x0127)         And {15 02}
+0x00B31D (+0x0129)         EqIdVal QId=0x028A Value=0x43F9 {12 06 8A 02 F9 43}
+0x00B323 (+0x012F)         Not {17 02}
+0x00B325 (+0x0131)         And {15 02}
+0x00B327 (+0x0133)         EqIdVal QId=0x028A Value=0x43FA {12 06 8A 02 FA 43}
+0x00B32D (+0x0139)         Not {17 02}
+0x00B32F (+0x013B)         And {15 02}
+0x00B331 (+0x013D)       End {29 02}
+0x00B333 (+0x013F)       Ref 'PROM21 Chipset Common Options' QId=0x0008 VarStore=0x0000 VarOffset=0xFFFF Flags=0x00 TargetForm=0x7008 {0F 0F 10 00 10 00 08 00 00 00 FF FF 00 08 70}
+0x00B342 (+0x014E)     End {29 02}
+0x00B344 (+0x0150)     SuppressIf {0A 82}
+0x00B346 (+0x0152)       EqIdVal QId=0x0009 Value=0xFF {12 86 09 00 FF 00}
+0x00B34C (+0x0158)         Not {17 02}
+0x00B34E (+0x015A)       End {29 02}
+0x00B350 (+0x015C)       Numeric 'Combo CBS' QId=0x0009 VarStore=0x5000 VarOffset=0x20 Flags=0x10 Width=1 Min=0 Max=255 Step=0 {07 91 11 00 12 00 09 00 00 50 20 00 10 20 00 FF 00}
+0x00B361 (+0x016D)         Default DefaultId=0x0 Value=0xFE {5B 06 00 00 00 FE}
+0x00B367 (+0x0173)       End {29 02}
+0x00B369 (+0x0175)     End {29 02}
+0x00E936 (+0x3742)     SuppressIf {0A 82}
+0x00E938 (+0x3744)       EqIdVal QId=0x0009 Value=0x3 {12 86 09 00 03 00}
+0x00E93E (+0x374A)         Not {17 02}
+0x00E940 (+0x374C)       End {29 02}
+0x00E942 (+0x374E)       OneOf 'STAPM Control' QId=0x0105 VarStore=0x5000 VarOffset=0x268 Flags=0x10 Width=1 Min=0 Max=1 Step=0 {05 91 F2 02 F3 02 05 01 00 50 68 02 10 10 00 01 00}
+0x00E953 (+0x375F)         OneOfOption 'Auto' Value=0x0 Flags=0x10 {09 07 1B 00 10 00 00}
+0x00E95A (+0x3766)         OneOfOption 'Manual' Value=0x1 Flags=0x00 {09 07 BD 00 00 00 01}
+0x00E961 (+0x376D)       End {29 02}
+0x00E963 (+0x376F)     End {29 02}
+0x00E965 (+0x3771)     SuppressIf {0A 82}
+0x00E967 (+0x3773)       EqIdVal QId=0x0105 Value=0x1 {12 86 05 01 01 00}
+0x00E96D (+0x3779)         Not {17 02}
+0x00E96F (+0x377B)         EqIdVal QId=0x0009 Value=0x3 {12 06 09 00 03 00}
+0x00E975 (+0x3781)         Not {17 02}
+0x00E977 (+0x3783)         Or {16 02}
+0x00E979 (+0x3785)       End {29 02}
+0x00E97B (+0x3787)       OneOf 'System Temperature Tracking' QId=0x0106 VarStore=0x5000 VarOffset=0x269 Flags=0x10 Width=1 Min=0 Max=15 Step=0 {05 91 F4 02 F5 02 06 01 00 50 69 02 10 10 00 0F 00}
+0x00E98C (+0x3798)         OneOfOption 'Auto' Value=0xF Flags=0x10 {09 07 1B 00 10 00 0F}
+0x00E993 (+0x379F)         OneOfOption '1' Value=0x1 Flags=0x00 {09 07 23 00 00 00 01}
+0x00E99A (+0x37A6)         OneOfOption '0' Value=0x0 Flags=0x00 {09 07 22 00 00 00 00}
+0x00E9A1 (+0x37AD)       End {29 02}
+0x00E9A3 (+0x37AF)     End {29 02}
+0x00E9A5 (+0x37B1)     SuppressIf {0A 82}
+0x00E9A7 (+0x37B3)       EqIdVal QId=0x0105 Value=0x1 {12 86 05 01 01 00}
+0x00E9AD (+0x37B9)         Not {17 02}
+0x00E9AF (+0x37BB)         EqIdVal QId=0x0009 Value=0x3 {12 06 09 00 03 00}
+0x00E9B5 (+0x37C1)         Not {17 02}
+0x00E9B7 (+0x37C3)         Or {16 02}
+0x00E9B9 (+0x37C5)       End {29 02}
+0x00E9BB (+0x37C7)       OneOf 'STAPM Boost Override' QId=0x0107 VarStore=0x5000 VarOffset=0x26A Flags=0x10 Width=1 Min=0 Max=15 Step=0 {05 91 F6 02 F7 02 07 01 00 50 6A 02 10 10 00 0F 00}
+0x00E9CC (+0x37D8)         OneOfOption 'Auto' Value=0xF Flags=0x10 {09 07 1B 00 10 00 0F}
+0x00E9D3 (+0x37DF)         OneOfOption '0' Value=0x0 Flags=0x00 {09 07 22 00 00 00 00}
+0x00E9DA (+0x37E6)         OneOfOption '1' Value=0x1 Flags=0x00 {09 07 23 00 00 00 01}
+0x00E9E1 (+0x37ED)       End {29 02}
+0x00E9E3 (+0x37EF)     End {29 02}
+0x00E9E5 (+0x37F1)     SuppressIf {0A 82}
+0x00E9E7 (+0x37F3)       EqIdVal QId=0x0105 Value=0x1 {12 86 05 01 01 00}
+0x00E9ED (+0x37F9)         Not {17 02}
+0x00E9EF (+0x37FB)         EqIdVal QId=0x0009 Value=0x3 {12 06 09 00 03 00}
+0x00E9F5 (+0x3801)         Not {17 02}
+0x00E9F7 (+0x3803)         Or {16 02}
+0x00E9F9 (+0x3805)       End {29 02}
+0x00E9FB (+0x3807)       OneOf 'STAPM Boost' QId=0x0108 VarStore=0x5000 VarOffset=0x26B Flags=0x10 Width=1 Min=0 Max=15 Step=0 {05 91 F8 02 F9 02 08 01 00 50 6B 02 10 10 00 0F 00}
+0x00EA0C (+0x3818)         OneOfOption 'Auto' Value=0xF Flags=0x10 {09 07 1B 00 10 00 0F}
+0x00EA13 (+0x381F)         OneOfOption '1' Value=0x1 Flags=0x00 {09 07 23 00 00 00 01}
+0x00EA1A (+0x3826)         OneOfOption '0' Value=0x0 Flags=0x00 {09 07 22 00 00 00 00}
+0x00EA21 (+0x382D)       End {29 02}
+0x00EA23 (+0x382F)     End {29 02}
+0x00EA25 (+0x3831)     SuppressIf {0A 82}
+0x00EA27 (+0x3833)       EqIdVal QId=0x0009 Value=0x3 {12 86 09 00 03 00}
+0x00EA2D (+0x3839)         Not {17 02}
+0x00EA2F (+0x383B)         EqIdVal QId=0x0105 Value=0x1 {12 06 05 01 01 00}
+0x00EA35 (+0x3841)         Not {17 02}
+0x00EA37 (+0x3843)         EqIdVal QId=0x0108 Value=0x1 {12 06 08 01 01 00}
+0x00EA3D (+0x3849)         Not {17 02}
+0x00EA3F (+0x384B)         And {15 02}
+0x00EA41 (+0x384D)         Or {16 02}
+0x00EA43 (+0x384F)       End {29 02}
+0x00EA45 (+0x3851)       Numeric 'Tskin Time Constant' QId=0x0109 VarStore=0x5000 VarOffset=0x26C Flags=0x10 Width=4 Min=0 Max=4294967295 Step=0 {07 9A FA 02 FB 02 09 01 00 50 6C 02 10 12 00 00 00 00 FF FF FF FF 00 00 00 00}
+0x00EA5F (+0x386B)         Default DefaultId=0x0 Value=0x0 {5B 09 00 00 02 00 00 00 00}
+0x00EA68 (+0x3874)       End {29 02}
+0x00EA6A (+0x3876)     End {29 02}

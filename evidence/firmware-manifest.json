@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "tested_model": "Alienware m16 R1 AMD",
+  "tested_cpu": "AMD Ryzen 9 7845HX",
+  "bios_version": "1.25.0",
+  "input": {
+    "file": "BIOS_IMG.rcv",
+    "bytes": 34667672,
+    "sha256": "8be9a5771ae18fb0b649d5e9a57679ad1213c5abc9e09364c232c31a62a4e1f2"
+  },
+  "patch": {
+    "target_module": "SetupUtilityApp",
+    "target_sha256": "350fad7419c53c862863617516c302eec146b6b240364c1ab78e1ea350b8969b",
+    "image_size": "0x2720",
+    "match_file_offset_and_rva": "0x22C0",
+    "raw_matches": 1,
+    "mapped_image_matches": 1,
+    "base_relocation_directory_size": 0,
+    "search_bytes": "FE61BD4D87E4ED4C80BD7C2495A12BC68BEE830386C3C04D888BDB90420A094264F7045225DFA248B3379EC122B85E0D",
+    "replacement_bytes": "FE61BD4D87E4ED4C80BD7C2495A12BC6ED0932C04B5F3146BD038ED627CD9DAF64F7045225DFA248B3379EC122B85E0D",
+    "pattern_bytes": 48,
+    "changed_bytes": 16,
+    "changed_range_inclusive": [
+      "0x22D0",
+      "0x22DF"
+    ],
+    "original_advance_guid": "0383EE8B-C386-4DC0-888B-DB90420A0942",
+    "replacement_cbs_guid": "C03209ED-5F4B-4631-BD03-8ED627CD9DAF",
+    "other_bytes_unchanged": true,
+    "config": "configs/Alienware_m16_R1_AMD_1.25.0_CBS_ENG_LOG.cfg",
+    "config_sha256": "ec9a9e2eb74d8581573ba4b53f8c8ea04a236f4f8946055b267b7700bdd5bed4"
+  },
+  "real_cbs": {
+    "formset_guid": "C03209ED-5F4B-4631-BD03-8ED627CD9DAF",
+    "module": "CbsSetupDxeRPL",
+    "module_sha256": "c0bb3840cdc394835e7fd0df5aedde9cfad6332ed637b7ac42955b864c1a3a43",
+    "duplicate_hii_resource_module": "dGpuOnlyDxe",
+    "package_list_length": 103967
+  },
+  "extraction": {
+    "unique_firmware_volumes": 5,
+    "ffs_records": 437,
+    "pe_te_raw_payloads": 514,
+    "issues": [],
+    "unique_scanned_buffers": 573
+  },
+  "ifr": {
+    "forms_package_offset": "0xB1F4",
+    "forms_package_length": "0x7341",
+    "opcodes": 4598,
+    "all_opcode_boundaries_and_scopes_valid": true,
+    "suppression_expression_test_combinations": 63
+  },
+  "validation_scope": {
+    "offline_patch_checks": "passed",
+    "menu_access": "I confirmed menu access and included photographs",
+    "fps_improvement": "I observed the FPS drops disappear with STT=0 and the recorded companion settings",
+    "stt_auto_retest": "I observed the FPS drops return after changing STT alone to Auto",
+    "repeat_auto_to_zero": "not documented in my results",
+    "long_term_chassis_thermal_validation": "not performed",
+    "other_devices": "not tested"
+  },
+  "notes": [
+    "The public CFG has the same bytes as the tested CFG; _ENG in the filename requests English SREP messages.",
+    "The CFG itself does not check the laptop model or BIOS hash.",
+    "This manifest records one case, not a compatibility guarantee."
+  ]
+}
